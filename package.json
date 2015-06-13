@@ -1,0 +1,40 @@
+{
+    "name": "slipstream-sqs",
+    "description": "A SQS queue provider for Slipstream",
+    "keywords": [
+        "queues",
+        "parallel",
+        "aws",
+        "sqs",
+        "slipstream"
+    ],
+    "version": "1.0.0",
+    "private": false,
+    "author": "Josh Stuart <joshstuartx@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/crimsonronin/slipstream-sqs.git"
+    },
+    "scripts": {
+        "lint": "./node_modules/.bin/jshint ./lib",
+        "checkStyle": "./node_modules/.bin/jscs ./lib",
+        "pretest": "npm run-script lint && npm run-script checkStyle",
+        "test": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should"
+    },
+    "dependencies": {
+        "async": "^0.9.0",
+        "aws-sdk": "^2.0.23",
+        "debug": "^2.2.0",
+        "pluralize": "^1.1.2",
+        "slipstream-message": "^1.0.0"
+    },
+    "devDependencies": {
+        "istanbul": "^0.3.14",
+        "jscs": "^1.12.0",
+        "jshint": "^2.7.0",
+        "mocha": "^2.2.4",
+        "should": "^6.0.1",
+        "sinon": "^1.14.1"
+    },
+    "license": "MIT"
+}
