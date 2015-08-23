@@ -2,4 +2,6 @@
 /tmp/
 *.iml
 *.log
-coverage
+/shippable
+/coverage
+xunit.xml
